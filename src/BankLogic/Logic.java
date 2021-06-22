@@ -1,3 +1,4 @@
+/*
 package BankLogic;
 
 import Bank.Account;
@@ -5,7 +6,6 @@ import BankDAO.Dao;
 
 
 public class Logic {
-
 
     public static boolean deposit(double amount, int id, Dao dao) {
         Account acc = dao.getAccountById(id);
@@ -17,3 +17,4 @@ public class Logic {
         return acc.withdraw(amount);
     }
 }
+*/

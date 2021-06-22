@@ -7,10 +7,6 @@ public class Bank {
 
     private List<Account> accounts = new ArrayList<>();
 
-    public Bank() {
-
-    }
-
     public List<Account> getAccountList() {
         return accounts;
     }

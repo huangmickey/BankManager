@@ -3,24 +3,38 @@ import Person.Person;
 
 
 public class Account {
-    private int id = 0;
-    private Person person;
+    private int accountId = 0;
     protected double balance;
     private String accountType;
 
-    public Account(Person person, String accountType) {
-        this.id++;
-        this.accountType = accountType;
-        this.person = person;
+    public Account() {
+
     }
 
-    public Person getPerson() {
-        return person;
+    public Account(String accountType) {
+        this.accountType = accountType;
+    }
+
+    public Account(int accountId, String accountType, double balance) {
+        this.accountId = accountId;
+        this.accountType = accountType;
+        this.balance = balance;
+
+    }
+
+    public int getAccountId() {
+        return accountId;
+    }
+
+    public String getAccountType() {
+        return accountType;
     }
 
     public double getBalance() {
         return balance;
     }
+
+
 
     public boolean withdraw(double amount) {
         if(amount > 0) {
@@ -38,23 +52,6 @@ public class Account {
             return true;
         }
         return false;
-    }
-
-    @Override
-    public String toString() {
-        return person.serialize() + "\n" + person.getAddress().serialize() +
-                "\n" + accountType + "\n" + balance;
-
-    }
-
-    public String serialize() {
-        String serial = person.serialize() + "\n" + person.getAddress().serialize() + "\n";
-        String serial1 = toString();
-        return serial + serial1;
-    }
-
-    public int getId() {
-        return id;
     }
 
 }

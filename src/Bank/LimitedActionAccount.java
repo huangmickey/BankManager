@@ -1,3 +1,4 @@
+/*
 package Bank;
 
 import Person.Person;
@@ -46,3 +47,4 @@ public class LimitedActionAccount extends Account {
 
     }
 }
+*/
